@@ -1,8 +1,9 @@
 var carousel;
 var slider = document.getElementsByTagName("img");
 var box = document.createElement('picture');
-var dir = 'http://i.imgur.com/'
-var images = ['HiaZsvV.jpg', 'pyiRNAP.jpg', 'U9hQk9k.jpg'];
+var dir = 'http://i.imgur.com/';
+var ext = '.jpg';
+var images = ['HiaZsvV', 'pyiRNAP', 'U9hQk9k'];
 var desc = ['image', 'image', 'image'];
 var time = 5000;
 var current = 0;
@@ -12,7 +13,7 @@ document.body.appendChild(box);
 
 for (i = 0; i < images.length; i++) {
     carousel = document.createElement('img');
-    carousel.src = dir + images[i];
+    carousel.src = dir + images[i] + ext;
     carousel.alt = desc[i] + ' ' + i;
     carousel.className = 'cat';
     document.getElementsByClassName('carousel')[0].appendChild(carousel);
